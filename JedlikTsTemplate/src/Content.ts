@@ -25,7 +25,9 @@ export default class Content {
 
         // Kezd a kódolást innen -->
 
-        res.write("Egyszerű Hello World!!!!!!!\n");
+        // 1. Olvassa be a tavok.txt állományban található adatokat,
+        // s annak felhasználásával oldja meg a következő feladatokat!
+        const megold: Megoldás = new Megoldás("tavok.txt");
 
         // Tetszőleges html teg-ek és attribútumok beépítése:
         res.write("<span style='color: blue;'><i>Színes és dőlt Hello World!'</i></span>\n");
