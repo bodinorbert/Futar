@@ -29,17 +29,16 @@ export default class Content {
         // s annak felhasználásával oldja meg a következő feladatokat!
         const megold: Megoldás = new Megoldás("tavok.txt");
 
-        // Tetszőleges html teg-ek és attribútumok beépítése:
-        res.write("<span style='color: blue;'><i>Színes és dőlt Hello World!'</i></span>\n");
+        // 2. Hány km volt a hét legelső útja??
+        // A kiszámított távolságot írassa ki a képernyőre!
+        res.write(`2. Feladat: A hét legelső útja: ${megold.elsőÚtHossza}m<br> km.`);
 
-        // Próbáljuk számra konvertálni a "kor" paraméter (http://localhost:8080/?kor=16) értékét:
-        let korod = parseInt(params.get("kor") as string);
-        // Ha nincs "kor" paraméter megadva, vagy nem lehet számra konvertálni értékét,
-        // akkor a "korod" változóba NaN érték kerül, ilyenkor legyen 18 év az értéke:
-        if (isNaN(korod)) korod = 18;
+        // 3. Az önkormányzat előírásai szerint a 20 m széles vagy annál keskenyebb telkek esetén
+        // teljes utcafront beépítést kell alkalmazni.
+        // Határozza meg és a képernyőre írassa ki, hogy ez hány telekre vonatkozik a Jólétsoron!
+        res.write(`3. Feladat: A hét utolsó útja: ${megold.utolsóÚtHossza}db telek<br> km.`);
 
-        res.write(`Kérem a korod: <input type='number' name='kor' value=${korod} style='max-width:100px;' onChange='this.form.submit();'>\n`);
-        res.write(`Te ${korod} éves vagy!\n`);
+        res.write(`4. Feladat: A futár a hét 2. és 6. napján nem dolgozott.`)
 
         // <---- Fejezd be a kódolást
 
