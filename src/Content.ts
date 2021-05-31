@@ -1,6 +1,7 @@
 ﻿import fs from "fs";
 import http from "http";
 import url from "url";
+import Megoldás from "./Megoldás";
 
 export default class Content {
     public static content(req: http.IncomingMessage, res: http.ServerResponse): void {
@@ -27,18 +28,19 @@ export default class Content {
 
         // 1. Olvassa be a tavok.txt állományban található adatokat,
         // s annak felhasználásával oldja meg a következő feladatokat!
-        const megold: Megoldás = new Megoldás("tavok.txt");
+        const mo: Megoldás = new Megoldás("tavok.txt");
+        // const megold: Megol = new Megoldás("tavok.txt");
 
         // 2. Hány km volt a hét legelső útja??
         // A kiszámított távolságot írassa ki a képernyőre!
-        res.write(`2. Feladat: A hét legelső útja: ${megold.elsőÚtHossza}m<br> km.`);
+        res.write(`2. Feladat: A hét legelső útja: ${mo.elsőÚtHossza} km.\n`);
 
         // 3. Az önkormányzat előírásai szerint a 20 m széles vagy annál keskenyebb telkek esetén
         // teljes utcafront beépítést kell alkalmazni.
         // Határozza meg és a képernyőre írassa ki, hogy ez hány telekre vonatkozik a Jólétsoron!
-        res.write(`3. Feladat: A hét utolsó útja: ${megold.utolsóÚtHossza}db telek<br> km.`);
+        res.write(`3. Feladat: A hét utolsó útja: ${mo.utolsóÚtHossza} km.\n`);
 
-        res.write(`4. Feladat: A futár a hét 2. és 6. napján nem dolgozott.`)
+        res.write("4. Feladat: A futár a követkető napon/napokon nem dolgozott:\n");
 
         // <---- Fejezd be a kódolást
 
