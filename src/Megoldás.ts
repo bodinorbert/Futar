@@ -21,4 +21,8 @@ export default class Megoldás {
         }
         this._fuvarok.sort((a, b) => a.súly - b.súly);
     }
+
+    public get szabadnapok(): number{
+        
+    }
 }

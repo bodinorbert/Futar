@@ -35,9 +35,6 @@ export default class Content {
         // A kiszámított távolságot írassa ki a képernyőre!
         res.write(`2. Feladat: A hét legelső útja: ${mo.elsőÚtHossza} km.\n`);
 
-        // 3. Az önkormányzat előírásai szerint a 20 m széles vagy annál keskenyebb telkek esetén
-        // teljes utcafront beépítést kell alkalmazni.
-        // Határozza meg és a képernyőre írassa ki, hogy ez hány telekre vonatkozik a Jólétsoron!
         res.write(`3. Feladat: A hét utolsó útja: ${mo.utolsóÚtHossza} km.\n`);
 
         res.write("4. Feladat: A futár a követkető napon/napokon nem dolgozott:\n");
