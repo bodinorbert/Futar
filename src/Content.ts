@@ -37,7 +37,9 @@ export default class Content {
 
         res.write(`3. Feladat: A hét utolsó útja: ${mo.utolsóÚtHossza} km.\n`);
 
-        res.write("4. Feladat: A futár a követkető napon/napokon nem dolgozott:\n");
+        res.write(`4. Feladat: A futár a követkető napon/napokon nem dolgozott: ${mo.nemDolgozott} \n`);
+
+        res.write(`\n5. feladat: a legtöbb fuvar a(z) {0}. napon volt!`)
 
         // <---- Fejezd be a kódolást
 

@@ -23,11 +23,6 @@ export default class Megoldás {
         this._fuvarok.sort((a, b) => a.súly - b.súly);
     }
 
-    public get szabadnapok(): number{
-        return this._fuvarok[0].napSorszám;
-        
-    }
-
     public get nemDolgozott(): string {
         let vissza = "";
         for (let nap = 1; nap <= 7; nap++) {
@@ -41,5 +36,12 @@ export default class Megoldás {
             }
         }
         return vissza;
+    }
+
+    public get legtobbNap(): string {
+        let utakSzáma: number[] = [0, 0, 0, 0, 0, 0, 0, 0,];
+        this._fuvarok.forEach(x => {
+            utakSzáma[x.fuvarszám]++;
+        })
     }
 }
