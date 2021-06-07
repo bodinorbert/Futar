@@ -1,5 +1,6 @@
 import Fuvar from "./Fuvar";
 import fs from "fs";
+import { kill } from "process";
 
 export default class Megoldás {
     private _fuvarok: Fuvar[] = [];
@@ -25,5 +26,20 @@ export default class Megoldás {
     public get szabadnapok(): number{
         return this._fuvarok[0].napSorszám;
         
+    }
+
+    public get nemDolgozott(): string {
+        let vissza = "";
+        for (let nap = 1; nap <= 7; nap++) {
+            // Megszámlálás
+            let utakSzáma = 0;
+            this._fuvarok.forEach(x => {
+                if (x.napSorszám == nap) utakSzáma++;
+            });
+            if (utakSzáma == 0) {
+                vissza += `${nap}. `;
+            }
+        }
+        return vissza;
     }
 }
