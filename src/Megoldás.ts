@@ -23,6 +23,7 @@ export default class Megoldás {
     }
 
     public get szabadnapok(): number{
+        return this._fuvarok[0].napSorszám;
         
     }
 }
